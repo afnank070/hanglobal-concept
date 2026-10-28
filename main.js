@@ -2,7 +2,8 @@
   'use strict';
 
   var html = document.documentElement;
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var forced = html.classList.contains('force-motion');
+  var reduced = !forced && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
@@ -272,10 +273,11 @@
     $$('.step').forEach(function (s) { s.classList.add('on'); });
   }
 
+  ScrollTrigger.config({ ignoreMobileResize: true });
   var mm = gsap.matchMedia();
 
   // stacked service cards shrink slightly as the next one covers them
-  mm.add('(min-width: 961px) and (prefers-reduced-motion: no-preference)', function () {
+  mm.add(reduced ? '(max-width: 0px)' : '(min-width: 0px)', function () {
     var cards = $$('.stack .card');
     cards.forEach(function (card, i) {
       var next = cards[i + 1];
@@ -288,7 +290,7 @@
   });
 
   // the pinned "follow one lead" story
-  mm.add('(min-width: 961px) and (prefers-reduced-motion: no-preference)', function () {
+  function journey(mobile) { return function () {
     var section = $('.journey');
     var panels = $$('.panel');
     var stepEls = $$('.j-steps li');
@@ -297,6 +299,8 @@
     if (!section || !n) return;
 
     html.classList.add('js-pin');
+    if (mobile) html.classList.add('js-pin-m');
+    var now = $('.j-now');
 
     gsap.set(panels, { yPercent: -50, autoAlpha: 0, y: 50, scale: 0.96 });
     gsap.set(panels[0], { autoAlpha: 1, y: 0, scale: 1 });
@@ -307,7 +311,7 @@
       scrollTrigger: {
         trigger: section,
         start: 'top top',
-        end: function () { return '+=' + Math.round(window.innerHeight * n * 0.95); },
+        end: function () { return '+=' + Math.round(window.innerHeight * n * (mobile ? 0.8 : 0.95)); },
         pin: true,
         scrub: 0.6,
         anticipatePin: 1,
@@ -315,6 +319,7 @@
         onUpdate: function () {
           var active = Math.min(n - 1, Math.max(0, Math.floor(tl.time() + 0.25)));
           stepEls.forEach(function (li, i) { li.classList.toggle('on', i === active); });
+          if (now && stepEls[active]) now.textContent = stepEls[active].childNodes[1].textContent;
           if (meter) meter.style.transform = 'scaleX(' + tl.progress().toFixed(3) + ')';
         }
       }
@@ -332,12 +337,14 @@
     tl.set({}, {}, n);
 
     return function () {
-      html.classList.remove('js-pin');
+      html.classList.remove('js-pin', 'js-pin-m');
       gsap.set(panels, { clearProps: 'all' });
       panels.forEach(function (p) { gsap.set($$('[data-r]', p), { clearProps: 'all' }); });
       stepEls.forEach(function (li, i) { li.classList.toggle('on', i === 0); });
     };
-  });
+  }; }
+  mm.add(reduced ? '(max-width: 0px)' : '(min-width: 961px)', journey(false));
+  mm.add(reduced ? '(max-width: 0px)' : '(max-width: 960px)', journey(true));
 
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(function () { ScrollTrigger.refresh(); });

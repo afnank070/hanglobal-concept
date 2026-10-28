@@ -12,7 +12,8 @@
 <link rel="stylesheet" href="styles.css">
 <script>
   document.documentElement.classList.add('js');
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (/[?&]motion=on/.test(location.search)) document.documentElement.classList.add('force-motion');
+  if (document.documentElement.classList.contains('force-motion') || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.classList.add('anim');
   }
 </script>
@@ -118,6 +119,7 @@
           <li><span>03</span>The CRM updates itself</li>
           <li><span>04</span>A call is booked</li>
         </ol>
+        <p class="j-now" aria-hidden="true">A message arrives</p>
         <div class="j-meter" aria-hidden="true"><i></i></div>
       </div>
       <div class="j-right">
