@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Han Global | Homepage Design Concept</title>
+<meta name="description" content="Design concept for the Han Global homepage. This is not the live site.">
+<meta name="theme-color" content="#0A0D0C">
+<link rel="preload" href="fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>
+  document.documentElement.classList.add('js');
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('anim');
+  }
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+<div class="concept-chip" role="note">Design concept · not the live site</div>
+
+<!-- NAV -->
+<header class="navwrap">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Han Global, home">
+      <svg width="30" height="30" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#0DE59E"/><path d="M9 7v14M19 7v14M9 14h10" stroke="#0A2A22" stroke-width="3" stroke-linecap="round"/></svg>
+      <span>HAN GLOBAL</span>
+    </a>
+    <div class="navlinks" id="navlinks">
+      <a href="#top">Home</a>
+      <a href="#how">How it works</a>
+      <a href="#services">Services</a>
+      <a href="#work">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn btn-neon btn-sm cta-nav mag" href="#contact">Book a discovery call</a>
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mpanel">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </nav>
+  <div class="mpanel" id="mpanel" hidden>
+    <a href="#top">Home</a>
+    <a href="#how">How it works</a>
+    <a href="#services">Services</a>
+    <a href="#work">Projects</a>
+    <a href="#contact">Contact</a>
+    <a class="btn btn-neon" href="#contact">Book a discovery call</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow in" style="--d:.05s"><span class="dot"></span>AI agents · CRM · Workflow automation</p>
+      <h1 class="h1" aria-label="Automate smarter. Operate faster. Grow without limits.">
+        <span class="ln" aria-hidden="true"><span class="wm"><span class="w" style="--i:0">Automate</span></span> <span class="wm"><span class="w" style="--i:1">smarter.</span></span></span>
+        <span class="ln" aria-hidden="true"><span class="wm"><span class="w" style="--i:2">Operate</span></span> <span class="wm"><span class="w" style="--i:3">faster.</span></span></span>
+        <span class="ln grad" aria-hidden="true"><span class="wm"><span class="w" style="--i:4">Grow</span></span> <span class="wm"><span class="w" style="--i:5">without</span></span> <span class="wm"><span class="w" style="--i:6">limits.</span></span></span>
+      </h1>
+      <p class="hero-sub in" style="--d:.7s">Han Global designs AI agents, CRM systems and automated workflows that capture, qualify and convert work around the clock, so your team spends its time on people instead of paperwork.</p>
+      <div class="ctas in" style="--d:.85s">
+        <a class="btn btn-neon mag" href="#contact">Get started
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-ghost mag" href="#how">Watch a lead go through</a>
+      </div>
+    </div>
+
+    <div class="console in" style="--d:.5s" role="img" aria-label="Illustration of an AI agent qualifying new leads, shown with sample data">
+      <div class="c-top">
+        <span class="tl"></span><span class="tl"></span><span class="tl"></span>
+        <span class="c-title">Han Agent · Lead desk</span>
+        <span class="live"><span class="dot"></span><span id="status">Reading task</span></span>
+      </div>
+      <div class="c-prompt"><span class="lbl">Task</span><div class="typed"><span id="typed"></span><span class="caret">|</span></div></div>
+      <div class="c-kpi">
+        <div><b id="count">0</b><span>Leads qualified today</span></div>
+        <div class="spark" aria-hidden="true"><i style="--h:40%"></i><i style="--h:62%"></i><i style="--h:48%"></i><i style="--h:78%"></i><i style="--h:66%"></i><i style="--h:92%"></i><i style="--h:100%"></i></div>
+      </div>
+      <ul class="c-leads">
+        <li><span class="av">M</span><div><b>Maya R.</b><span>Instagram DM</span></div><em>Call booked</em></li>
+        <li><span class="av">S</span><div><b>Studio 44</b><span>Website form</span></div><em>Qualified</em></li>
+        <li><span class="av">C</span><div><b>Clinic 7</b><span>Email</span></div><em>Sent to sales</em></li>
+      </ul>
+      <p class="c-foot">Illustration with sample data</p>
+    </div>
+  </div>
+  <a class="scrollcue" href="#how" aria-label="Scroll to how it works"><span></span></a>
+</section>
+
+<!-- TOOLS -->
+<div class="marq" aria-label="Platforms we work with">
+  <p class="marq-label">Built on the platforms your team already uses</p>
+  <div class="mtrack" aria-hidden="true">
+    <span>Salesforce</span><span>HubSpot</span><span>Zoho</span><span>GoHighLevel</span><span>n8n</span><span>Zapier</span><span>Twilio</span><span>Pipedrive</span><span>Jotform</span><span>Nintex</span>
+    <span>Salesforce</span><span>HubSpot</span><span>Zoho</span><span>GoHighLevel</span><span>n8n</span><span>Zapier</span><span>Twilio</span><span>Pipedrive</span><span>Jotform</span><span>Nintex</span>
+  </div>
+</div>
+
+<!-- JOURNEY (scroll story) -->
+<section class="journey" id="how" aria-labelledby="how-h">
+  <div class="journey-pin">
+    <div class="wrap journey-grid">
+      <div class="j-left">
+        <p class="kicker light">Follow one lead</p>
+        <h2 class="h2 light" id="how-h">From first message to booked call, without anyone typing.</h2>
+        <ol class="j-steps">
+          <li class="on"><span>01</span>A message arrives</li>
+          <li><span>02</span>The agent qualifies it</li>
+          <li><span>03</span>The CRM updates itself</li>
+          <li><span>04</span>A call is booked</li>
+        </ol>
+        <div class="j-meter" aria-hidden="true"><i></i></div>
+      </div>
+      <div class="j-right">
+        <div class="j-stage">
+
+          <article class="panel" data-step="0">
+            <div class="card-h"><span>Instagram DM</span><em>Sample</em></div>
+            <div class="chat">
+              <p class="bub in-b" data-r>Hi! We're a 12-person team and our follow-ups are a mess. Can you help automate them?</p>
+              <p class="typing" data-r aria-hidden="true"><i></i><i></i><i></i></p>
+              <p class="bub out-b" data-r>Happy to help. Which CRM do you use, and when would you like to start?</p>
+            </div>
+          </article>
+
+          <article class="panel" data-step="1">
+            <div class="card-h"><span>Han Agent · Qualifying</span><em>Sample</em></div>
+            <ul class="checks">
+              <li data-r><b>Team size</b><span>12 people</span><i></i></li>
+              <li data-r><b>Current CRM</b><span>Salesforce</span><i></i></li>
+              <li data-r><b>Timeline</b><span>This quarter</span><i></i></li>
+              <li data-r><b>Intent</b><span>Wants automation</span><i></i></li>
+            </ul>
+            <div class="score" data-r><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="25" class="trk"/><circle cx="30" cy="30" r="25" class="val"/></svg><div><b>Hot lead</b><span>Sample score 86 / 100</span></div></div>
+          </article>
+
+          <article class="panel" data-step="2">
+            <div class="card-h"><span>CRM record · created automatically</span><em>Sample</em></div>
+            <dl class="fields">
+              <div data-r><dt>Contact</dt><dd>[Sample contact]</dd></div>
+              <div data-r><dt>Company</dt><dd>[Sample company], 12 people</dd></div>
+              <div data-r><dt>Source</dt><dd>Instagram DM</dd></div>
+              <div data-r><dt>Stage</dt><dd><em class="pill">Qualified</em></dd></div>
+              <div data-r><dt>Owner</dt><dd>Sales team</dd></div>
+              <div data-r><dt>Notes</dt><dd>Conversation summarized by the agent</dd></div>
+            </dl>
+          </article>
+
+          <article class="panel" data-step="3">
+            <div class="card-h"><span>Calendar · discovery call</span><em>Sample</em></div>
+            <div class="cal">
+              <div class="cal-days" data-r><span>Wed</span><span class="sel">Thu</span><span>Fri</span></div>
+              <div class="slot" data-r><b>10:30</b><span>Discovery call · booked</span></div>
+              <ul class="done">
+                <li data-r>Confirmation sent to the lead</li>
+                <li data-r>Sales team alerted</li>
+                <li data-r>Reminder scheduled</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec cream" id="services">
+  <div class="wrap svc-grid">
+    <div class="svc-left rv">
+      <p class="kicker">What we build</p>
+      <h2 class="h2">One system. Three ways to put intelligence to work.</h2>
+      <p class="lead-p">We combine deep industry experience with a platform-agnostic approach, then tailor every solution to how your business actually operates. AI agents do the work, your CRM holds the truth, and custom software connects the two.</p>
+      <div class="mt"><a class="btn btn-dark mag" href="#contact">Talk to an expert</a></div>
+    </div>
+    <div class="stack">
+      <article class="card c-dark" style="--t:112px">
+        <div class="cnum">01</div>
+        <h3>AI Agents &amp; Autonomous Workflows</h3>
+        <p>We build and integrate AI agents that work as digital teammates, embedded directly in your operations instead of sitting beside them as one more tool.</p>
+        <ul class="caps">
+          <li>AI workflow design and orchestration</li>
+          <li>Integration with CRMs, ERPs and data platforms</li>
+          <li>Predictive, decision-making and generative agents</li>
+          <li>Data enrichment and outreach automation</li>
+        </ul>
+        <div class="viz flow" aria-hidden="true"><span>Trigger</span><i></i><span>AI agent</span><i></i><span>Your CRM</span><i></i><span>Your team</span></div>
+        <p class="impact">Up to 60% less manual workload*</p>
+      </article>
+      <article class="card c-green" style="--t:138px">
+        <div class="cnum">02</div>
+        <h3>CRM Implementation &amp; Optimization</h3>
+        <p>Technology only matters when people use it. We implement, optimize and humanize CRM systems such as Salesforce, HubSpot and Zoho, so every team sees the same picture and moves faster.</p>
+        <ul class="caps">
+          <li>CRM discovery and fit-gap analysis</li>
+          <li>Data migration, cleansing and integration</li>
+          <li>AI-driven analytics</li>
+          <li>Adoption enablement and hands-on training</li>
+        </ul>
+        <div class="viz pipe" aria-hidden="true"><div style="--h:100%">Lead</div><div style="--h:74%">Qualified</div><div style="--h:48%">Proposal</div><div class="won" style="--h:30%">Won</div></div>
+        <p class="impact">Unified visibility, stronger sales collaboration, faster pipelines</p>
+      </article>
+      <article class="card c-dark" style="--t:164px">
+        <div class="cnum">03</div>
+        <h3>Custom Software &amp; Integrations</h3>
+        <p>Websites, applications and SaaS products built to plug into your agents and your CRM. Fast, secure, and designed around the way your team really works.</p>
+        <ul class="caps">
+          <li>Product strategy and architecture</li>
+          <li>API design and system integration</li>
+          <li>Web and mobile applications</li>
+          <li>Cloud deployment and managed services</li>
+        </ul>
+        <div class="viz tags" aria-hidden="true"><span>REST</span><span>GraphQL</span><span>Webhooks</span><span>SSO</span><span>Cloud</span></div>
+        <p class="impact">From isolated apps to one connected ecosystem</p>
+      </article>
+    </div>
+  </div>
+  <div class="wrap"><p class="fine">*Figure carried over from the current Han Global services page. Confirm before launch.</p></div>
+</section>
+
+<!-- ESTIMATE -->
+<section class="sec dark" id="estimate" aria-labelledby="est-h">
+  <div class="wrap calc-grid">
+    <div class="rv">
+      <p class="kicker light">Estimate</p>
+      <h2 class="h2 light" id="est-h">How many hours could automation give back to your team?</h2>
+      <p class="lead-p light">Move the sliders to match your business. It is a simple estimate from your own numbers, not a promise. We would confirm the real figure in a discovery session.</p>
+    </div>
+    <form class="calc-card rv" onsubmit="return false">
+      <label for="leads"><span>Leads or inquiries per week</span><output id="o-leads">80</output></label>
+      <input type="range" id="leads" min="10" max="500" step="10" value="80">
+      <label for="mins"><span>Minutes per lead (reply, qualify, log)</span><output id="o-mins">12 min</output></label>
+      <input type="range" id="mins" min="2" max="30" step="1" value="12">
+      <label for="share"><span>Share of that work the agent handles</span><output id="o-share">60%</output></label>
+      <input type="range" id="share" min="10" max="90" step="5" value="60">
+      <div class="result" aria-live="polite"><b id="hours">0</b><span>hours back per month</span><small id="days"></small></div>
+      <p class="formula">Estimate = leads per week × 52 ÷ 12 × minutes ÷ 60 × share handled</p>
+    </form>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec cream" id="process" aria-labelledby="proc-h">
+  <div class="wrap">
+    <p class="kicker">How we work</p>
+    <h2 class="h2" id="proc-h" style="max-width:720px">From first conversation to a system that keeps getting better.</h2>
+    <div class="steps" id="steps">
+      <div class="steps-line" aria-hidden="true"><i></i></div>
+      <div class="step"><span class="step-n">STEP 1</span><h3>Discover</h3><p>Align leadership on the highest-impact workflows where intelligence can create measurable value.</p></div>
+      <div class="step"><span class="step-n">STEP 2</span><h3>Design &amp; Pilot</h3><p>Design, prototype and deploy a focused AI agent or CRM enhancement, validated against clear KPIs.</p></div>
+      <div class="step"><span class="step-n">STEP 3</span><h3>Scale</h3><p>Expand adoption across teams and business units, tuned by analytics, feedback loops and change management.</p></div>
+      <div class="step"><span class="step-n">STEP 4</span><h3>Sustain &amp; Evolve</h3><p>Keep refining through ongoing measurement, governance and adaptation as your business changes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="neon">
+  <div class="wrap">
+    <div class="stats">
+      <div class="rv"><b class="stat-n" data-count="100" data-suffix="+">100+</b><span>Projects completed</span></div>
+      <div class="rv"><b class="stat-n" data-count="100" data-suffix="%">100%</b><span>Client satisfaction</span></div>
+      <div class="rv"><b class="stat-n" data-count="100" data-suffix="%">100%</b><span>Post-launch support</span></div>
+    </div>
+    <p class="fine-c">Figures taken from the current site. Client to confirm before launch.</p>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="sec mint" id="industries" aria-labelledby="ind-h">
+  <div class="wrap">
+    <p class="kicker">Industries</p>
+    <h2 class="h2" id="ind-h" style="max-width:700px">Intelligence tailored to the way your sector works.</h2>
+    <div class="bento">
+      <div class="ind rv"><span class="ind-n">01</span><h3>Construction &amp; Showrooms</h3><p>Smart quoting, scheduling and customer engagement powered by AI agents.</p></div>
+      <div class="ind rv"><span class="ind-n">02</span><h3>Logistics &amp; Manufacturing</h3><p>Predictive routing, inventory optimization and digital operations monitoring.</p></div>
+      <div class="ind rv"><span class="ind-n">03</span><h3>Healthcare &amp; Medical Practices</h3><p>Patient journey automation, provider workflows and compliance monitoring.</p></div>
+      <div class="ind rv"><span class="ind-n">04</span><h3>Professional Services</h3><p>Intelligent client lifecycle tracking, predictive billing and performance insights.</p></div>
+      <div class="ind rv"><span class="ind-n">05</span><h3>Technology &amp; Startups</h3><p>CRM acceleration, go-to-market enablement and SaaS integration at scale.</p></div>
+      <div class="ind rv"><span class="ind-n">06</span><h3>Real Estate</h3><p>Systems that capture, qualify and convert leads around the clock.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="sec cream" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <p class="kicker">Selected projects</p>
+    <h2 class="h2" id="work-h" style="max-width:700px">Real systems, running for real businesses.</h2>
+    <div class="work-grid">
+      <article class="work rv">
+        <div class="work-top t1"><span>AI Agent</span><span>n8n</span></div>
+        <div class="work-body">
+          <h3>Instagram AI agent for business communication</h3>
+          <p>Replies to DMs instantly, qualifies leads, answers FAQs and routes complex questions to the right person, so the business can talk to customers around the clock.</p>
+          <p class="result">[Result metric, e.g. reply time. Client to confirm]</p>
+        </div>
+      </article>
+      <article class="work rv">
+        <div class="work-top t2"><span>Reporting</span><span>ChatGPT</span><span>Zapier</span></div>
+        <div class="work-body">
+          <h3>Automated reporting with ChatGPT and Zapier</h3>
+          <p>Pulls data from multiple platforms, analyzes it and produces clear, ready-to-use reports automatically, replacing slow manual collection.</p>
+          <p class="result">[Result metric, e.g. hours saved per week. Client to confirm]</p>
+        </div>
+      </article>
+      <article class="work rv">
+        <div class="work-top t3"><span>CRM</span><span>Salesforce</span></div>
+        <div class="work-body">
+          <h3>Salesforce customer-journey automation</h3>
+          <p>Tracks leads, triggers personalized actions and updates records at every stage, from first contact through conversion and retention.</p>
+          <p class="result">[Result metric, e.g. response time. Client to confirm]</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="sec dark" id="clients" aria-labelledby="cl-h">
+  <div class="wrap">
+    <p class="kicker light">Client voices</p>
+    <h2 class="h2 light" id="cl-h" style="max-width:700px">Specific results, in clients' own words.</h2>
+    <div class="test-grid">
+      <figure class="tcard rv"><blockquote>[Quote naming a specific result, e.g. "We now answer every inquiry in under a minute."]</blockquote><figcaption><span class="av">?</span><span><b>[Client name]</b>[Role, Company]</span></figcaption></figure>
+      <figure class="tcard rv"><blockquote>[Quote about working with the team and the outcome it produced.]</blockquote><figcaption><span class="av">?</span><span><b>[Client name]</b>[Role, Company]</span></figcaption></figure>
+      <figure class="tcard rv"><blockquote>[Quote about adoption, e.g. how the team now uses the CRM.]</blockquote><figcaption><span class="av">?</span><span><b>[Client name]</b>[Role, Company]</span></figcaption></figure>
+    </div>
+    <p class="fine-d">Placeholders. Replace with real, attributable quotes (name, role, company) before launch.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec cream" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="center">
+      <p class="kicker">Questions</p>
+      <h2 class="h2" id="faq-h">Things teams ask before they start.</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>How do you stop AI assistants from giving wrong answers?</summary><p>We connect assistants to curated, continuously updated sources using retrieval (RAG), set confidence controls, and route sensitive or high-risk questions to a person.</p></details>
+      <details><summary>How do you keep our data and users secure?</summary><p>Security is non-negotiable. We use encrypted systems, run routine vulnerability checks and design with compliance in mind, including GDPR readiness.</p></details>
+      <details><summary>Why isn't our team using our CRM, and how do you fix it?</summary><p>Low adoption usually comes from messy data, complicated workflows or thin training. We clean the data, shape workflows around how your team actually works, automate routine tasks and train people hands-on.</p></details>
+      <details><summary>How long does a typical project take?</summary><p>It depends on scope and integrations. Every engagement starts with discovery, then runs on clear milestones, weekly updates and sprint-based delivery so you always know where things stand.</p></details>
+      <details><summary>How do you prevent cost overruns?</summary><p>Through a rigorous discovery phase, a prioritized MVP and a formal change-control process, so every new request is estimated and approved before work continues.</p></details>
+      <details><summary>What support do you offer after launch?</summary><p>Flexible support plans covering bug fixes, uptime monitoring, performance tracking and security patching, each with clear response times.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="aurora" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap">
+    <h2 class="cta-h rv">Ready to automate?<br><span>Let's build.</span></h2>
+    <p class="rv">Intelligence isn't built, it's integrated. Schedule a discovery session and we'll map the workflows where AI and your CRM can do the most for your team.</p>
+    <div class="mt rv"><a class="btn btn-neon btn-lg mag" href="mailto:reach@hanglobal.ai">Book a discovery call
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Han Global, home">
+          <svg width="30" height="30" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#0DE59E"/><path d="M9 7v14M19 7v14M9 14h10" stroke="#0A2A22" stroke-width="3" stroke-linecap="round"/></svg>
+          <span>HAN GLOBAL</span>
+        </a>
+        <p class="foot-blurb">AI agents, CRM systems and workflow automation for modern enterprises.</p>
+      </div>
+      <div><h4>Company</h4><a href="#how">How it works</a><a href="#work">Projects</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+      <div><h4>Services</h4><a href="#services">AI Agents</a><a href="#services">CRM</a><a href="#services">Custom Software</a></div>
+      <div><h4>Contact</h4><a href="mailto:reach@hanglobal.ai">reach@hanglobal.ai</a><span>[Phone number]</span><span>[Street address, City, State ZIP]</span><span>[LinkedIn link]</span></div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Han Global, LLC. All rights reserved.</span>
+      <span class="legal-links"><a href="#top">Terms &amp; Conditions</a><a href="#top">Privacy Policy</a><a href="#top">Accessibility</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>
