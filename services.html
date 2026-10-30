@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Services | Han Global (design concept)</title>
+<title>Services | Han Global</title>
 <meta name="description" content="Han Global services: AI and intelligent automation, CRM and enterprise systems, digital solutions and integration. Design concept.">
 <meta name="theme-color" content="#0A0D0C">
 <link rel="preload" href="fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,7 +21,6 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="progress" aria-hidden="true"><i></i></div>
-<div class="concept-chip" role="note">Design concept · not the live site</div>
 
 <header class="navwrap">
   <nav class="nav" aria-label="Main">
@@ -75,9 +74,30 @@
     <p class="kicker rv">Industries we serve first</p>
     <h2 class="h2 rv" id="i-h" style="max-width:720px">Experience that carries across sectors.</h2>
     
-    <div class="chips rv "><span>Real Estate</span><span>Financial Services</span><span>Professional Services</span><span>Construction &amp; Building Products</span><span>Technology</span><span>And other industries</span></div><p class="fine">Priority sectors confirmed by Han Global. We also work across other industries.</p>
+    <div class="chips rv "><span>Real Estate</span><span>Financial Services</span><span>Professional Services</span><span>Construction &amp; Building Products</span><span>Technology</span><span>And other industries</span></div>
   </div>
-</section><section class="cta" id="contact-cta">
+</section><!-- ESTIMATE -->
+<section class="sec dark" id="estimate" aria-labelledby="est-h">
+  <div class="wrap calc-grid">
+    <div class="rv">
+      <p class="kicker light">Estimate</p>
+      <h2 class="h2 light" id="est-h">How many hours could automation give back to your team?</h2>
+      <p class="lead-p light">Move the sliders to match your business. It is a simple estimate from your own numbers, not a promise. We would confirm the real figure in a discovery session.</p>
+    </div>
+    <form class="calc-card rv" onsubmit="return false">
+      <label for="leads"><span>Leads or inquiries per week</span><output id="o-leads">80</output></label>
+      <input type="range" id="leads" min="10" max="500" step="10" value="80">
+      <label for="mins"><span>Minutes per lead (reply, qualify, log)</span><output id="o-mins">12 min</output></label>
+      <input type="range" id="mins" min="2" max="30" step="1" value="12">
+      <label for="share"><span>Share of that work the agent handles</span><output id="o-share">60%</output></label>
+      <input type="range" id="share" min="10" max="90" step="5" value="60">
+      <div class="result" aria-live="polite"><b id="hours">0</b><span>hours back per month</span><small id="days"></small></div>
+      <p class="formula">Estimate = leads per week × 52 ÷ 12 × minutes ÷ 60 × share handled</p>
+    </form>
+  </div>
+</section>
+
+<section class="cta" id="contact-cta">
   <div class="aurora" aria-hidden="true"><i></i><i></i></div>
   <div class="wrap">
     <h2 class="cta-h rv">Ready to automate?<br><span>Let's build.</span></h2>
@@ -97,7 +117,7 @@
         </a>
         <p class="foot-blurb">AI, CRM and digital solutions for mid-market and enterprise organizations.</p>
       </div>
-      <div><h4>Company</h4><a href="about.html">About</a><a href="work.html">Work</a><a href="index.html#faq">FAQ</a><a href="contact.html">Contact</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="work.html">Work</a><a href="contact.html#faq">FAQ</a><a href="contact.html">Contact</a></div>
       <div><h4>Services</h4><a href="ai-automation.html">AI &amp; Intelligent Automation</a><a href="crm-enterprise.html">CRM &amp; Enterprise Systems</a><a href="digital-solutions.html">Digital Solutions &amp; Integration</a></div>
       <div><h4>Contact</h4><a href="mailto:reach@hanglobal.ai">reach@hanglobal.ai</a><span>[Phone number]</span><span>[Street address, City, State ZIP]</span><span>[LinkedIn link]</span></div>
     </div>

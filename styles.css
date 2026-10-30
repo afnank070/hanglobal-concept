@@ -518,3 +518,28 @@ a.more:hover{gap:14px;border-color:currentColor}
 }
 .ph.sq{height:auto;width:100%}
 .person,.split>*,.phero-vis{min-width:0}
+
+/* case study extras */
+.dtiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.dtiles div{padding:14px;border-radius:14px;background:rgba(0,0,0,.34);border:1px solid rgba(255,255,255,.1)}
+.dtiles b{display:block;font-family:var(--head);font-weight:800;font-size:24px;color:#fff}
+.dtiles span{display:block;margin-top:4px;font-size:12px;color:rgba(255,255,255,.6)}
+.spark.wide{height:70px;margin-bottom:6px;gap:7px}
+.spark.wide i{flex:1;width:auto}
+.ba{margin-top:32px;display:flex;flex-direction:column;gap:16px;max-width:680px}
+.ba-r{display:grid;grid-template-columns:70px minmax(0,1fr) auto;align-items:center;gap:14px;font-size:15px}
+.ba-r span{font-weight:600;color:var(--forest)}
+.ba-r b{font-family:var(--head);font-weight:800;color:var(--teal);min-width:110px;text-align:right}
+.ba-t{height:16px;border-radius:8px;background:rgba(15,63,63,.1);overflow:hidden}
+.ba-t i{display:block;height:100%;width:var(--w);border-radius:8px;background:#9aa8a3;transform-origin:left}
+.ba-t i.g{background:var(--neon)}
+.anim .ba-t i{transform:scaleX(0);transition:transform 1.4s var(--ease)}
+.anim .ba.go .ba-t i{transform:scaleX(1)}
+.anim .ba.go .ba-r:nth-child(2) .ba-t i{transition-delay:.5s}
+.tline{position:relative;margin-top:28px;padding-left:28px;display:flex;flex-direction:column;gap:30px;border-left:2px solid rgba(15,63,63,.18);max-width:680px}
+.tline li{position:relative}
+.tline li::before{content:"";position:absolute;left:-37px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--cream);border:3px solid var(--forest)}
+.tline b{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);font-weight:600}
+.tline h3{margin-top:6px;font-size:21px;color:var(--teal)}
+.tline p{margin-top:8px;font-size:16.5px;line-height:1.6;color:var(--muted)}
+@media (max-width:640px){.ba-r{grid-template-columns:56px minmax(0,1fr)}.ba-r b{grid-column:1/-1;text-align:left;margin-top:-6px}.dtiles b{font-size:19px}}

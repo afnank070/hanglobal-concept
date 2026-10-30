@@ -90,6 +90,18 @@
     });
   })();
 
+
+  /* ---------- Before/after bars ---------- */
+  (function bars() {
+    var els = $$('.ba');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('go'); }); return; }
+    var io = new IntersectionObserver(function (en) {
+      en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('go'); io.unobserve(x.target); } });
+    }, { threshold: 0.4 });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+
   /* ---------- Hero console (typing, counter, leads) ---------- */
   (function consoleDemo() {
     var typed = $('#typed'), count = $('#count'), status = $('#status');
