@@ -54,6 +54,42 @@
     update();
   })();
 
+
+  /* ---------- Work filter ---------- */
+  (function filter() {
+    var btns = $$('.fbtn');
+    var cards = $$('#wgrid .work');
+    if (!btns.length) return;
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.getAttribute('data-filter');
+        btns.forEach(function (x) { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        cards.forEach(function (c) {
+          var show = f === 'all' || c.getAttribute('data-cat') === f;
+          c.hidden = !show;
+          if (show) { c.style.opacity = 1; c.style.transform = ''; }
+        });
+        if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+      });
+    });
+  })();
+
+  /* ---------- Contact form (concept: nothing is sent) ---------- */
+  (function contactForm() {
+    var f = $('#cform'), note = $('#cf-note');
+    if (!f) return;
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var bad = 0;
+      $$('[required]', f).forEach(function (i) {
+        var ok = i.value.trim() && (i.type !== 'email' || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(i.value));
+        i.setAttribute('aria-invalid', ok ? 'false' : 'true');
+        if (!ok) bad++;
+      });
+      note.textContent = bad ? 'Please fill in your name and a valid work email.' : 'Concept preview: on the live site this message would be sent to the Han Global team.';
+    });
+  })();
+
   /* ---------- Hero console (typing, counter, leads) ---------- */
   (function consoleDemo() {
     var typed = $('#typed'), count = $('#count'), status = $('#status');
