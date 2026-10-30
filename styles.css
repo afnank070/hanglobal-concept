@@ -555,3 +555,18 @@ a.more:hover{gap:14px;border-color:currentColor}
 .work-top span{background:rgba(0,0,0,.3)}
 .c-green .pipe div{background:rgba(0,0,0,.3);color:#fff}
 .c-green .pipe div.won{background:var(--neon);color:#0A2A22}
+
+/* mobile menu current page + flow diagrams on phones */
+.mpanel a.active{background:rgba(13,229,158,.16);color:var(--neon)}
+@keyframes sweepY{from{background-position:0 0}to{background-position:0 -200%}}
+@media (max-width:640px){
+  .flow i,.vflow:not(.big) i{display:none}
+  .flow span:not(:last-of-type)::after,.vflow:not(.big) span:not(:last-of-type)::after{content:"\2192";margin-left:10px;color:var(--neon);font-weight:700}
+  .vflow.big{flex-direction:column;align-items:flex-start;gap:0}
+  .vflow.big span{font-size:15px;padding:11px 18px}
+  .vflow.big i{width:2px;height:22px;margin-left:28px;background:linear-gradient(180deg,transparent,var(--neon),transparent);background-size:100% 200%;animation:sweepY 2s linear infinite}
+}
+@media (max-width:640px){
+  .team-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;margin-left:-18px;margin-right:-18px;padding:0 18px 8px;-webkit-overflow-scrolling:touch}
+  .person{flex:0 0 68%;scroll-snap-align:start}
+}
