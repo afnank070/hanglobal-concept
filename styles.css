@@ -570,3 +570,9 @@ a.more:hover{gap:14px;border-color:currentColor}
   .team-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;margin-left:-18px;margin-right:-18px;padding:0 18px 8px;-webkit-overflow-scrolling:touch}
   .person{flex:0 0 68%;scroll-snap-align:start}
 }
+
+/* Services overview: when relevant / what we do / what changes */
+.pflow{display:grid;gap:16px;margin:2px 0 4px}
+.pflow dt{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--neon)}
+.pcard.p-green .pflow dt{color:#D7FFF0}
+.pflow dd{margin:5px 0 0;font-size:16px;line-height:1.55;color:rgba(255,255,255,.93)}

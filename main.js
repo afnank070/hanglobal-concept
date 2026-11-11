@@ -107,7 +107,7 @@
     var typed = $('#typed'), count = $('#count'), status = $('#status');
     var leads = $$('.c-leads li');
     if (!typed || !count || !status) return;
-    var prompt = 'Qualify new DMs and book a call for hot leads.';
+    var prompt = 'Read a new request, update the system, trigger the next step.';
     if (reduced) {
       typed.textContent = prompt;
       count.textContent = '128';
