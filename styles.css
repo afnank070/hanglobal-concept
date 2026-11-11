@@ -324,7 +324,7 @@ input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;bac
 /* footer */
 .foot{background:#070908;color:rgba(255,255,255,.7);padding:72px 0 90px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px}
-.foot h4{margin:0 0 16px;font-family:var(--body);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-weight:600}
+.foot h3{margin:0 0 16px;font-family:var(--body);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-weight:600}
 .foot a,.foot-grid span{display:block;padding:6px 0;font-size:15px}
 .foot a:hover{color:var(--neon)}
 .foot a.brand{display:flex;padding:0}
@@ -576,3 +576,17 @@ a.more:hover{gap:14px;border-color:currentColor}
 .pflow dt{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--neon)}
 .pcard.p-green .pflow dt{color:#D7FFF0}
 .pflow dd{margin:5px 0 0;font-size:16px;line-height:1.55;color:rgba(255,255,255,.93)}
+
+/* Scroll story: keep the longer intro inside short screens */
+@media (min-width:961px) and (max-height:820px){
+  .js-pin .journey .h2{font-size:clamp(26px,2.9vw,38px)}
+  .js-pin .j-steps{margin-top:18px}
+  .js-pin .j-steps li{padding:8px 0;font-size:17px}
+  .js-pin .journey .lead-p{font-size:15px;margin-top:12px}
+}
+@media (max-height:720px){
+  .js-pin-m .journey .lead-p{display:none}
+}
+
+/* Breadcrumb links: not distinguishable by colour alone */
+.crumbs a{text-decoration:underline;text-underline-offset:3px}
